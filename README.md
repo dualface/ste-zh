@@ -29,7 +29,7 @@
 Claude Code（全局）：
 
 ```bash
-git clone <仓库地址> ~/.claude/skills/ste
+git clone https://github.com/dualface/ste-zh.git ~/.claude/skills/ste
 ```
 
 其他支持 `SKILL.md` 格式的 Agent，按各自文档放到对应的 skill 目录。
