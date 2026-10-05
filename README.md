@@ -17,7 +17,7 @@
 
 | 路径 | 内容 |
 |---|---|
-| `SKILL.md` | 入口：生效方式、适用范围、24 条规则、5 种回复模板、自检清单。 |
+| `SKILL.md` | 入口：生效方式、适用范围、25 条规则、5 种回复模板、自检清单。 |
 | `references/terminology.md` | ASD-STE100 关键词的中文译法、情态词、虚化动词替换表、状态词、模板用词、标点规则。 |
 | `examples/result-report.md` | 结果汇报的改写前后对比。 |
 | `examples/task-summary.md` | 多项总结的改写前后对比。 |
