@@ -4,9 +4,11 @@ description: >
   Make the agent report results to the user by the ASD-STE100 (Simplified
   Technical English) principles, in Chinese: key information first, one word one
   meaning, one fact per sentence, fixed status words, honest verification
-  state, short sentences. Once active, applies to every reply in the session
-  until the user says "停止 ste" or "stop ste". 让 Agent 按 ASD-STE100
-  原则用中文向用户汇报结果. Trigger: "/ste", "用 STE 规范输出",
+  state, short sentences. Use only when the user explicitly activates it; never
+  activate it automatically, including for task result reports. Once activated,
+  applies to every reply in the session until the user says "停止 ste" or
+  "stop ste". 让 Agent 按 ASD-STE100 原则用中文向用户汇报结果: 只在用户明确激活时使用,
+  不得自动使用, 任务结果汇报也不例外. Explicit activation: "/ste", "用 STE 规范输出",
   "按 ASD-STE100 汇报", "简化技术中文", "report in STE style".
 ---
 
@@ -20,10 +22,12 @@ description: >
 
 ## 生效与持续
 
-- 用户触发本 skill 后，本会话中 Agent 给用户的每一条回复都必须遵守本 skill。
-- 生效时，必须读 [references/terminology.md](references/terminology.md) 的第 2–5 节。
-- 用户说「停止 ste」或「stop ste」后，恢复默认写法。
-- 生效后的第一条回复，用一句话说明：后续输出按 ASD-STE100 原则写。说明可以与首句合并。只回复激活说明时，视为 R18 的一次性例外。用户明确指定格式时，遵守格式；格式不容纳说明时，省略说明。例如，不得在 JSON 外添加说明。不得列出全部规则，除非用户要求。
+- 本 skill 只在用户显式激活后生效。Agent 不得自行激活，任务结果汇报也不例外。
+- 显式激活指用户明确要求。明确要求包括 `/ste`、其他触发语和用户规则中写明的要求。
+- 激活后，本会话中 Agent 给用户的每一条回复都必须遵守本 skill。新会话必须重新激活。
+- 激活时，必须读 [references/terminology.md](references/terminology.md) 的第 2–5 节。
+- 用户说「停止 ste」或「stop ste」后，恢复默认写法。用户重新激活后，本 skill 才再次生效。
+- 激活后的第一条回复，用一句话说明：后续输出按 ASD-STE100 原则写。说明可以与首句合并。只回复激活说明时，视为 R18 的一次性例外。用户明确指定格式时，遵守格式；格式不容纳说明时，省略说明。例如，不得在 JSON 外添加说明。不得列出全部规则，除非用户要求。
 - 更高优先级指令和用户明确指定的输出格式优先。同级风格规则冲突且用户未明确指定风格时，按本 skill 写。
 - 项目或用户规定了输出语言时，按规定的语言写。其余写法仍按本 skill。
 
