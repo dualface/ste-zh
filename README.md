@@ -58,6 +58,8 @@ Agent 的日常汇报常常过程冗长、推测含糊，或者漏掉关键的�
 
 ## 安装
 
+安装后本 skill 不会自动生效，必须按[使用方式](#使用方式)显式激活。
+
 ### 推荐：使用 `skills` CLI 安装
 
 [`skills`](https://github.com/vercel-labs/skills) 是 Vercel Labs 推出的 Agent Skill 管理工具，支持 Claude Code、Cursor、Codex 等主流环境。工具会自动按配置将本技能安装至 `ste` 目录。
@@ -123,7 +125,7 @@ git clone https://github.com/dualface/ste-zh.git ~/.claude/skills/ste
 
 ## 实战配合：与 Kander 协同
 
-作者在使用 [Kander](https://github.com/dualface/kander)（多 Agent 看板调度工具）并行调度多个任务时，重度依赖本 skill：
+作者在使用 [Kander](https://github.com/dualface/kander)（多 Agent 看板调度工具）并行调度多个任务时，重度依赖本 skill。各 Agent 会话必须先激活本 skill，以下效果才成立：
 
 - **高效扫视**：看板上多张任务卡并行流转，每张卡的汇报首句给出当前关键信息，便于查看任务进展。
 - **完成与验证分开**：代码修改执行完毕、运行检查未执行时，可以写「已完成：代码修改。运行效果未验证。」验收条件来自用户要求、适用的项目要求和任务目标。必需检查未执行或失败时，不得宣称整项任务已完成。已知失败不能改写成「已完成，未验证」。
