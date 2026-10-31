@@ -150,8 +150,8 @@ git clone https://github.com/dualface/ste-zh.git ~/.claude/skills/ste
 
 ## 作者的其他项目
 
-欢迎体验作者 [dualface](https://github.com/dualface) 的其他项目：
+欢迎体验作者 [dualface](https://dualface.dev/) 的其他项目：
 
-- [Kander](https://github.com/dualface/kander)：规则驱动的多 Agent 看板调度工具，内置独立审核与自动化交付门禁。
-- [Ullage](https://github.com/dualface/ullage-cli)：本地守护进程与 CLI 工具，查看 Claude、ChatGPT、Grok、Cursor 等订阅的用量。
-- [QuickTUI](https://quicktui.ai/)：适用于各类编码 Agent 的手机端完整终端，支持自托管直连，单台主机免费。
+- [Kander](https://github.com/dualface/kander)：规则驱动的多 Agent 看板调度，内置独立审核与交付门禁。
+- [Ullage](https://github.com/dualface/ullage-cli)：本地守护进程 + CLI，查看 Claude、ChatGPT、Grok、Cursor 等订阅的用量。
+- [QuickTUI](https://quicktui.ai/)：手机上的完整终端，适用于任何编码 Agent。自托管直连，单台主机免费。
