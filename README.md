@@ -99,6 +99,12 @@ npx skills remove --global ste
 git clone https://github.com/dualface/ste-zh.git ~/.claude/skills/ste
 ```
 
+**WorkBuddy（全局）：**
+
+```bash
+git clone https://github.com/dualface/ste-zh.git ~/.workbuddy/skills/ste
+```
+
 其他支持 `SKILL.md` 规范的 Agent，参考各自文档将文件放置在对应的 skills 路径下。
 
 ---
@@ -119,7 +125,7 @@ git clone https://github.com/dualface/ste-zh.git ~/.claude/skills/ste
 
 - **运行机制**：本 skill 靠 Agent 遵守上下文中的指令生效，没有程序强制执行。
 - **上下文衰减**：在极长会话或发生上下文压缩（compaction）后，Agent 可能会遗忘指令规范。若发现输出风格退化，随时重新发送 `/ste` 即可恢复。
-- **全局常驻**：如希望每个会话默认开启，可将「每个会话开始时激活 ste skill」写入 Agent 的全局规则中（例如 Claude Code 的 `~/.claude/CLAUDE.md` 或 `~/.claude/rules/` 规则文件）。规则中写明的要求算显式激活。
+- **全局常驻**：如希望每个会话默认开启，可将「每个会话开始时激活 ste skill」写入 Agent 的全局规则中（例如 Claude Code 的 `~/.claude/CLAUDE.md` 或 `~/.claude/rules/` 规则文件、WorkBuddy 的 `~/.workbuddy/MEMORY.md`）。规则中写明的要求算显式激活。
 
 ---
 
